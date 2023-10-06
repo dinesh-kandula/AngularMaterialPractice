@@ -1,1 +1,73 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+:root {
+    --primary-dark: #224F34;
+    --primary-light: #C2EFD4;
+    --white: #FFF;
+    --black: #000;
+    --grey: #CCC;
+    --light-grey: #F8F7F7;
+}
+
+/* Common Styling */
+.popin-font{
+    font-family: Poppins !important;
+}
+.rufina-font{
+    font-family: Rufina !important;
+}
+
+.c-primary-dark{color: var(--primary-dark);}
+.c-primary-light{color: var(--primary-light);}
+.c-white{color: var(--white);}
+.c-black{color: var(--black);}
+.c-grey{color: var(--grey);}
+
+.bg-primary-dark{background-color: var(--primary-dark);}
+.bg-primary-light{background-color: var(--primary-light);}
+.bg-black{background-color: var(--black);}
+.bg-grey{background-color: var(--grey);}
+.bg-light-grey{background-color: var(--light-grey);}
+.bg-white{background-color: var(--white);}
+
+
+.un-listed{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Commin Styling */
+
+
+.cdk-overlay-container{
+    
+    .mat-mdc-menu-panel {
+        min-width: 220px;
+        max-width: 320px;
+        background-color: var(--primary-light);
+    
+        .mat-mdc-menu-content button{
+            display: flex;
+            justify-content: center;
+
+            .mat-mdc-raised-button{
+                background-color: var(--primary-dark);
+            }
+        }
+
+        .mat-mdc-menu-content button:hover{
+            text-shadow: 2px 2px 8px var(--black);
+        }
+
+        .mdc-button--outlined .mdc-button__ripple {
+            border-color: var(--primary-dark);
+        }
+
+        .nav-right .mat-mdc-button-base.mat-unthemed {
+            --mdc-outlined-button-label-text-color: var(--primary-dark);
+        }
+    }
+}

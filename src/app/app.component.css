@@ -1,0 +1,105 @@
+/* Header Styling  */
+.header-section{
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+
+    .mat-toolbar{
+        padding: 0 5%;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--primary-light);
+    }
+
+    .nav-item{
+        display: flex;
+        align-items: center;
+    }
+    
+    .nav-item .nav-link{
+        cursor: pointer;
+        color: var(--primary-dark);
+        text-transform: uppercase;
+    }
+
+    .nav-item .nav-link:hover{
+        color: var(--black);
+        text-shadow: 2px 2px 8px var(--black);
+    }
+
+    .mat-icon{      
+        --mat-icon-color: var(--primary-dark);
+        color: var(--mat-icon-color);
+    }
+
+    .mat-badge-warn {
+        --mat-badge-background-color: #10FF70;
+        --mat-badge-text-color: var(--black);
+    }
+
+    .mdc-button--outlined .mdc-button__ripple {
+        border-color: var(--primary-dark);
+    }
+
+    .nav-right .mat-mdc-button-base.mat-unthemed {
+        --mdc-outlined-button-label-text-color: var(--primary-dark);
+    }
+   
+}
+
+/* Header Section Styling Ends */
+
+/* Main Section Styling Starts */
+.main-section{
+    .mat-mdc-card {
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .content{
+
+        .mat-mdc-raised-button.mat-accent {
+            --mdc-protected-button-container-color: var(--primary-dark);
+            --mdc-protected-button-label-text-color: var(--white);
+        }
+    }
+
+    .image-container div{
+        border-top-right-radius: 6%;
+        border-top-left-radius: 20%;
+        border-bottom-left-radius: 6%;
+        border-bottom-right-radius: 20%;
+
+        .dots{
+            width: 100px;
+        }
+
+        .girl{
+            height: 80vh;
+        }
+
+        @media all and (max-width: 768px){
+            .dots{
+                width: 75px;
+            }
+    
+            .girl{
+                width: 30vh;
+                height: auto;
+            }
+        }
+
+        @media all and (max-width: 576px){
+            .dots{
+                width: 55px;
+            }
+
+            .girl{
+                width: 20vh;
+            }
+        }
+    }
+}
+
+/* Main Section Styling Ends */
