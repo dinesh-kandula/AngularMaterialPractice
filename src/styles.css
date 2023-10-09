@@ -70,4 +70,45 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
             --mdc-outlined-button-label-text-color: var(--primary-dark);
         }
     }
+
+    .mat-mdc-dialog-container { 
+        --mdc-dialog-container-color: var(--primary-dark);
+        --mdc-dialog-container-shape: 8px;
+        width: 50vw;
+        --mdc-dialog-container-elevation-shadow: 5px 5px 10px;
+    }
+
+    .mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
+        color: var(--white) !important;
+    }
+
+    .mat-mdc-tab.mdc-tab--active:hover .mdc-tab__text-label & .mat-mdc-tab.mdc-tab--active:focus .mdc-tab__text-label {
+        color: var(--white) !important;
+    }
+
+    .mat-mdc-tab-group, .mat-mdc-tab-nav-bar {
+        --mdc-tab-indicator-active-indicator-color:     var(--white);
+        --mat-tab-header-active-label-text-color:       var(--white);
+        --mat-tab-header-active-ripple-color:           var(--white);
+        --mat-tab-header-active-focus-label-text-color: var(--white);
+        --mat-tab-header-active-hover-label-text-color: var(--white);
+        --mat-tab-header-active-focus-indicator-color:  var(--white);
+        --mat-tab-header-active-hover-indicator-color:  var(--white);
+
+        --mdc-tab-indicator-inactive-indicator-color:       var(--grey);
+        --mat-tab-header-inactive-label-text-color:         var(--grey);
+        --mat-tab-header-inactive-ripple-color:             var(--grey);
+        --mat-tab-header-inactive-focus-label-text-color:   var(--grey);
+        --mat-tab-header-inactive-hover-label-text-color:   var(--grey);
+        --mat-tab-header-inactive-focus-indicator-color:    var(--grey);
+        --mat-tab-header-inactive-hover-indicator-color:    var(--grey);
+    }
+
+    .mat-mdc-card{
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    --mdc-filled-text-field-container-color : transparent;
+    --mdc-filled-text-field-caret-color: var(--primary-light);
 }

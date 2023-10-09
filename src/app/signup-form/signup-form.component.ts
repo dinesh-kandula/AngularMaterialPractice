@@ -4,22 +4,21 @@ import { FormBuilder, Validators } from '@angular/forms';
 
 
 @Component({
-  selector: 'app-form-component',
-  templateUrl: './form-component.component.html',
-  styleUrls: ['./form-component.component.css']
+  selector: 'app-signup-form',
+  templateUrl: './signup-form.component.html',
+  styleUrls: ['./signup-form.component.css']
 })
-export class FormComponentComponent {
+export class SignupFormComponent {
   private fb = inject(FormBuilder);
   addressForm = this.fb.group({
-    company: null,
+    email: [null, Validators.required],
     firstName: [null, Validators.required],
     lastName: [null, Validators.required],
     address: [null, Validators.required],
-    address2: null,
     city: [null, Validators.required],
     state: [null, Validators.required],
-    postalCode: [null, Validators.compose([
-      Validators.required, Validators.minLength(5), Validators.maxLength(5)])
+    phonenumber: [null, Validators.compose([
+      Validators.required, Validators.minLength(10), Validators.maxLength(10)])
     ],
     shipping: ['free', Validators.required]
   });
@@ -27,12 +26,13 @@ export class FormComponentComponent {
   hasUnitNumber = false;
 
   states = [
-    {name: 'Alabama', abbreviation: 'AL'},
-    {name: 'Alaska', abbreviation: 'AK'},
-    {name: 'American Samoa', abbreviation: 'AS'},
-    {name: 'Arizona', abbreviation: 'AZ'},
-    {name: 'Arkansas', abbreviation: 'AR'},
-    {name: 'California', abbreviation: 'CA'},
+    {name: 'Andhra Pradesh', abbreviation: 'AP'},
+    {name: 'Arunachal Pradesh', abbreviation: 'AN'},
+    {name: 'Assam', abbreviation: 'AS'},
+    {name: 'Bhiar', abbreviation: 'BR'},
+    {name: 'Chattishgarh', abbreviation: 'CH'},
+    {name: 'Delhi', abbreviation: 'DL'},
+    {name: 'Hariyana', abbreviation: 'HR'},
     {name: 'Colorado', abbreviation: 'CO'},
     {name: 'Connecticut', abbreviation: 'CT'},
     {name: 'Delaware', abbreviation: 'DE'},
@@ -89,6 +89,6 @@ export class FormComponentComponent {
   ];
 
   onSubmit(): void {
-    alert('Thanks!');
+    alert("Please complete the verfication, Verfication link is sent to your email id");
   }
 }
