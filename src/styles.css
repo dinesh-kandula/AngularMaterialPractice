@@ -6,18 +6,27 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 :root {
     --primary-dark: #224F34;
     --primary-light: #C2EFD4;
+    --primary-light-rgb-30:rgb(194, 239, 212, 0.3); 
     --white: #FFF;
     --black: #000;
     --grey: #CCC;
     --light-grey: #F8F7F7;
+    --golden: #F5D426;
 }
 
 /* Common Styling */
 .popin-font{
     font-family: Poppins !important;
 }
+.robot-slab-font{
+    font-family: Roboto Slab !important;
+}
 .rufina-font{
     font-family: Rufina !important;
+}
+
+ul{
+    list-style-type: none;
 }
 
 .c-primary-dark{color: var(--primary-dark);}
@@ -74,8 +83,16 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     .mat-mdc-dialog-container { 
         --mdc-dialog-container-color: var(--primary-dark);
         --mdc-dialog-container-shape: 8px;
-        width: 50vw;
+        width: 100%;
+        max-width: 80vw;
         --mdc-dialog-container-elevation-shadow: 5px 5px 10px;
+    }
+
+    @media all and (max-width: 992px){
+        .mat-mdc-dialog-container{
+            min-width: 80vw;
+            max-width: 90vh;
+        }
     }
 
     .mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {

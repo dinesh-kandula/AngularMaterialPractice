@@ -13,6 +13,8 @@ import { MatToolbarModule} from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatDialogModule} from '@angular/material/dialog';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatChipsModule} from '@angular/material/chips';
 
 
 
@@ -29,7 +31,9 @@ const MaterialComponents = [
   MatToolbarModule,
   MatMenuModule,
   MatDialogModule,
-  MatTabsModule
+  MatTabsModule,
+  MatDividerModule,
+  MatChipsModule
 ]
 
 @NgModule({

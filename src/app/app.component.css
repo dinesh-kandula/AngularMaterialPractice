@@ -50,6 +50,7 @@
 
 /* Header Section Styling Ends */
 
+
 /* Main Section Styling Starts */
 .main-section{
     .mat-mdc-card {
@@ -103,3 +104,142 @@
 }
 
 /* Main Section Styling Ends */
+
+
+/* Best Selling Styling Starts */
+.best-selling{
+    --c-head: #373737;
+    --c-sub-head: #454545;
+    --c-main: #93B9A2;
+    --c-secondary: #CADCD0;
+
+    .c-head{
+        color: var(--c-head);
+    }
+    
+    .bg-main{
+        background-color: var(--c-main);
+    }
+
+    .bg-secondary{
+        background-color: var(--c-secondary);
+    }
+
+    .mat-mdc-card{
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .example-card .image-container{
+        box-shadow: 1px 1px 8px 1px var(--black);
+        display: flex;
+        justify-content: center;
+        align-items: end;
+    }
+
+    .example-card .image-container img{
+        width: 100%;
+        height: max-content;
+    }
+
+    /* @media all and (min-width:578px) and (max-width: 766px){
+        .example-card .image-container img{
+            width: 55%;
+            height: 100%;
+        }
+    } */
+
+    /* @media all and (max-width: 576px){
+        .example-card .image-container img{
+            width: 95%;
+            height: 100%;
+        }
+    } */
+
+    .example-card .mat-icon{
+        color: var(--golden);
+    }
+
+    .see-all{
+        .mat-icon{
+            columns: var(--primary-dark);
+        }
+
+        .mat-mdc-outlined-button:not(:disabled) {
+            width: 26%;
+            border-color: var(--primary-dark);
+            color: var(--primary-dark);
+        }
+
+        @media all and (max-width: 576px){
+            .mat-mdc-outlined-button:not(:disabled) {
+                width: 50%;
+            }
+        }
+        
+        .mat-mdc-outlined-button {
+            --mat-mdc-button-persistent-ripple-color: var(--primary-light-rgb-30);
+            --mat-mdc-button-ripple-color: var(--primary-light-rgb-30);
+        }
+    }
+  
+
+}
+
+/* Best Selling Styling Ends */
+
+
+/* Our Products Styling Start */
+.our-products{
+    --c-head: #373737;
+    --c-sub-head: #454545;
+    --c-main: #93B9A2;
+    --c-secondary: #CADCD0;
+
+    .c-head{
+        color: var(--c-head);
+    }
+    
+    .bg-main{
+        background-color: var(--c-main);
+    }
+
+    .bg-secondary{
+        background-color: var(--c-secondary);
+    }
+
+    .mat-mdc-card{
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .example-card .image-container{
+        box-shadow: 1px 1px 8px 1px var(--black);
+        display: flex;
+        justify-content: center;
+        align-items: end;
+    }
+
+    .example-card .image-container img{
+        width: 80%;
+        height: max-content;
+    }
+
+    @media all and (max-width: 786px){
+        .example-card .image-container img{
+            width: 95%;
+            height: 100%;
+        }
+    }
+
+    .example-card .mat-icon{
+        color: var(--golden);
+    }
+}
+/* Our Products Styling Ends */
+
+/* Exclusive offer Styling Start */
+.exclusive-offer{
+    
+}
+/* Exclusive offer Styling Ends */
