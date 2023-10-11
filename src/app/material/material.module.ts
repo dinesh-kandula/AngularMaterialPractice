@@ -15,6 +15,11 @@ import { MatDialogModule} from '@angular/material/dialog';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatChipsModule} from '@angular/material/chips';
+import {CdkStepperModule} from '@angular/cdk/stepper';
+import {NgIf} from '@angular/common';
+import {FormsModule} from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+
 
 
 
@@ -33,7 +38,11 @@ const MaterialComponents = [
   MatDialogModule,
   MatTabsModule,
   MatDividerModule,
-  MatChipsModule
+  MatChipsModule,
+  CdkStepperModule,
+  NgIf,
+  FormsModule,
+  MatFormFieldModule
 ]
 
 @NgModule({

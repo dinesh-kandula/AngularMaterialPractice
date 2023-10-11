@@ -7,6 +7,7 @@ import { MaterialModule } from './material/material.module';
 import { DialogExampleComponent } from './dialog-example/dialog-example.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 
@@ -20,7 +21,8 @@ import { SignupFormComponent } from './signup-form/signup-form.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent],
