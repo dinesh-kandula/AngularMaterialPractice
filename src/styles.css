@@ -3,6 +3,7 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+/* Root Variablels */
 :root {
     --primary-dark: #224F34;
     --primary-light: #C2EFD4;
@@ -15,7 +16,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     --dark-grey: #6F6F6F;
 }
 
-/* Common Styling */
+/* Common Styling  Start */
 .popin-font{
     font-family: Poppins !important;
 }
@@ -59,7 +60,7 @@ a{
     text-decoration: none;
 }
 
-/* Commin Styling */
+/* Common Styling  Ends */
 
 html{
     --mdc-outlined-text-field-caret-color : var(--primary-dark) !important;
@@ -68,6 +69,7 @@ html{
     --mdc-filled-text-field-caret-color: var(--primary-light) !important;
     --mdc-filled-text-field-focus-label-text-color: var(--primary-light) !important;
 }
+
 .cdk-overlay-container{
     
     .mat-mdc-menu-panel {
@@ -145,4 +147,86 @@ html{
 
     --mdc-filled-text-field-container-color : transparent;
     --mdc-filled-text-field-caret-color: var(--primary-light);
+
+
+    .cdk-menu-bar .example-menu-bar-item {
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+      
+        user-select: none;
+        min-width: 34px;
+        line-height: 26px;
+        padding: 0 16px;
+    }
+        
+          
+    .example-menu-bar-item[aria-expanded='true'],
+    .example-menu-item[aria-expanded='true'] {
+      background-color: rgb(0,0,0, 0.1) !important;
+    }          
+
+    .example-menu {
+        display: inline-flex;
+        flex-direction: column;
+        min-width: 180px;
+        max-width: 280px;
+        background-color: rgb(255, 255, 255);
+        padding: 6px 0;
+        font-family: Poppins;
+    }
+      
+    .example-menu hr {
+        width: 100%;
+        color: rgba(0, 0, 0, 0.12);
+        margin: 0;
+    }
+      
+    .example-menu .example-menu-group {
+        display: inline-flex;
+        flex-direction: column;
+    }
+      
+    .example-menu .example-menu-item {
+        color: var(--primary-dark);
+        font-size: 16px;
+
+        background-color: transparent;
+        cursor: pointer;
+        border: none;
+          
+        user-select: none;
+        min-width: 64px;
+        line-height: 36px;
+        padding: 0 16px;
+          
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        flex: 1;
+    }
+          
+    .example-menu-item > span {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        justify-content: flex-end;
+    }
+          
+    .example-menu .example-menu-item:hover {
+        background-color: rgb(208, 208, 208);
+    }
+      
+    .example-menu .example-menu-item[role='menuitemradio'][aria-checked='true'] {
+        background-color: rgb(225, 225, 225);
+    }
+    
+    .example-menu .example-menu-item[role='menuitemcheckbox'][aria-checked='true'] {
+        background-color: rgb(225, 225, 225);
+    }
+    
+    .example-menu .example-menu-item:active {
+        background-color: rgb(170, 170, 170);
+    }
+    
 }

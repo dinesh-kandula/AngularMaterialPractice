@@ -19,8 +19,15 @@ import {CdkStepperModule} from '@angular/cdk/stepper';
 import {NgIf} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
-
-
+import {
+  CdkMenuItemRadio,
+  CdkMenuItemCheckbox,
+  CdkMenuGroup,
+  CdkMenu,
+  CdkMenuTrigger,
+  CdkMenuItem,
+  CdkMenuBar,
+} from '@angular/cdk/menu';
 
 
 const MaterialComponents = [
@@ -42,7 +49,14 @@ const MaterialComponents = [
   CdkStepperModule,
   NgIf,
   FormsModule,
-  MatFormFieldModule
+  MatFormFieldModule,
+  CdkMenuItemRadio,
+  CdkMenuItemCheckbox,
+  CdkMenuGroup,
+  CdkMenu,
+  CdkMenuTrigger,
+  CdkMenuItem,
+  CdkMenuBar
 ]
 
 @NgModule({

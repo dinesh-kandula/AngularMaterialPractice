@@ -8,18 +8,210 @@
       </button>
 
       <div class="justify-content-between col-8 d-none d-lg-flex">
-        <ul class="un-listed nav-item m-0">
-          <li class="px-3"><a class="nav-link popin-font c-primary-dark fs-6 fw-bold">Home</a></li>
-          <li class="px-3"><a class="nav-link popin-font c-primary-dark fs-6 fw-bold">Shop</a></li>
-          <li class="px-3"><a class="nav-link popin-font c-primary-dark fs-6 fw-bold">Features</a></li>
-          <li class="px-3"><a class="nav-link popin-font c-primary-dark fs-6 fw-bold">Contact</a></li>
-        </ul>
+        <div class="cdk-menu">
+          <div cdkMenuBar>
+            <button class="example-menu-bar-item popin-font c-primary-dark" cdkMenuItem >Home</button>
+            <button class="example-menu-bar-item popin-font c-primary-dark" cdkMenuItem [cdkMenuTriggerFor]="ethnic">Ethnic</button>
+            <button class="example-menu-bar-item popin-font c-primary-dark" cdkMenuItem [cdkMenuTriggerFor]="western">Western</button>
+            <button class="example-menu-bar-item popin-font c-primary-dark" cdkMenuItem [cdkMenuTriggerFor]="beauty">Beauty</button>
+          </div>
+          
+          <!-- Ethnic Section -->
+          <ng-template #ethnic>
+            <div class="example-menu d-flex flex-column" cdkMenu>
+              <button class="example-menu-item" cdkMenuItem>All Women Ethnic</button>
+              <hr />
+              <button class="example-menu-item" cdkMenuItem [cdkMenuTriggerFor]="sarees">Sarees <span>&#10148;</span></button>
+              <button class="example-menu-item" cdkMenuItem [cdkMenuTriggerFor]="kutis">Kurtis <span>&#10148;</span></button>
+              <button class="example-menu-item" cdkMenuItem [cdkMenuTriggerFor]="sdm">Suits & Dress Material <span>&#10148;</span></button>
+              <button class="example-menu-item" cdkMenuItem >Kurta Sets</button>
+              <hr />
+              <button class="example-menu-item" cdkMenuItem [cdkMenuTriggerFor]="otherEthnic">Other Ethnic <span>&#10148;</span></button>
+            </div>
+          </ng-template>
+
+          <ng-template #sarees>
+            <div class="example-menu" cdkMenu>
+              <button class="example-menu-item" cdkMenuItem>All Sarees</button>
+              <hr />
+              <button class="example-menu-item" cdkMenuItem>Silk Sarees</button>
+              <button class="example-menu-item" cdkMenuItem>Cotton Sarees</button>
+              <button class="example-menu-item" cdkMenuItem>Cotton Silk Sarees</button>
+              <button class="example-menu-item" cdkMenuItem>Cotton Sarees</button>
+              <button class="example-menu-item" cdkMenuItem>Chiffon Sarees</button>
+              <button class="example-menu-item" cdkMenuItem>Embroidered Sarees</button>
+            </div>
+          </ng-template>
+
+          <ng-template #kutis>
+            <div class="example-menu" cdkMenu>
+              <button class="example-menu-item" cdkMenuItem>All Kurtis</button>
+              <hr />
+              <button class="example-menu-item" cdkMenuItem>Anarkali Kurtis</button>
+              <button class="example-menu-item" cdkMenuItem>Rayon Kutis</button>
+              <button class="example-menu-item" cdkMenuItem>Cotton Kurtis</button>
+              <button class="example-menu-item" cdkMenuItem>Embroidered Kutis</button>
+            </div>
+          </ng-template>
+
+          <ng-template #sdm>
+            <div class="example-menu" cdkMenu>
+              <button class="example-menu-item" cdkMenuItem>All Suits & Dress Material</button>
+              <hr />
+              <button class="example-menu-item" cdkMenuItem>Cotton Suits</button>
+              <button class="example-menu-item" cdkMenuItem>Embroidered Suits</button>
+              <button class="example-menu-item" cdkMenuItem>Chanderi Suits</button>
+            </div>
+          </ng-template>
+
+          <ng-template #otherEthnic>
+            <div class="example-menu" cdkMenu>
+              <button class="example-menu-item" cdkMenuItem>Blouse</button>
+              <button class="example-menu-item" cdkMenuItem>Duppatas</button>
+              <button class="example-menu-item" cdkMenuItem>Lehanga</button>
+              <button class="example-menu-item" cdkMenuItem>Gown</button>
+              <button class="example-menu-item" cdkMenuItem>Ethnic Bottomwear</button>
+            </div>
+          </ng-template>
+          <!-- Ethnic Section Ends -->
+          
+          <!-- Western Section  -->
+          <ng-template #western>
+            <div class="example-menu" cdkMenu>
+              <button class="example-menu-item" cdkMenuItem>All Western</button>
+              <hr />
+              <button class="example-menu-item" cdkMenuItem [cdkMenuTriggerFor]="top">Topwear <span>&#10148;</span></button>
+              <button class="example-menu-item" cdkMenuItem [cdkMenuTriggerFor]="bottom">Bottomwear <span>&#10148;</span></button>
+              <button class="example-menu-item" cdkMenuItem [cdkMenuTriggerFor]="sleep">Sleepwear <span>&#10148;</span></button>
+            </div>
+          </ng-template>
+
+          <ng-template #top>
+            <div class="example-menu" cdkMenu>
+              <button class="example-menu-item" cdkMenuItem>All Tops</button>
+              <hr />
+              <button class="example-menu-item" cdkMenuItem>Dresses</button>
+              <button class="example-menu-item" cdkMenuItem>Sweaters</button>
+              <button class="example-menu-item" cdkMenuItem>Jumpsuits</button>
+            </div>
+          </ng-template>
+
+          <ng-template #bottom>
+            <div class="example-menu" cdkMenu>
+              <button class="example-menu-item" cdkMenuItem>Jeans</button>
+              <button class="example-menu-item" cdkMenuItem>Jeggings</button>
+              <button class="example-menu-item" cdkMenuItem>Palazzos</button>
+              <button class="example-menu-item" cdkMenuItem>Shorts</button>
+              <button class="example-menu-item" cdkMenuItem>Skirts</button>
+              <button class="example-menu-item" cdkMenuItem>Joggers</button>
+            </div>
+          </ng-template>
+
+          <ng-template #sleep>
+            <div class="example-menu" cdkMenu>
+              <button class="example-menu-item" cdkMenuItem>Night Suits</button>
+              <button class="example-menu-item" cdkMenuItem>Pyjams</button>
+            </div>
+          </ng-template>
+          <!-- Western Section Ends -->
+
+          <!-- Beauty Section  -->
+          <ng-template #beauty>
+            <div class="example-menu" cdkMenu>
+              <button class="example-menu-item" cdkMenuItem [cdkMenuTriggerFor]="makeup">MakeUp <span>&#10148;</span></button>
+              <button class="example-menu-item" cdkMenuItem [cdkMenuTriggerFor]="skinBathBody">Skin Bath & Body <span>&#10148;</span></button>
+              <button class="example-menu-item" cdkMenuItem [cdkMenuTriggerFor]="hairCare">Haircare <span>&#10148;</span></button>
+              <button class="example-menu-item" cdkMenuItem >Baby Care</button>
+              <button class="example-menu-item" cdkMenuItem [cdkMenuTriggerFor]="fragnances">Fragnances <span>&#10148;</span></button>
+              <button class="example-menu-item" cdkMenuItem [cdkMenuTriggerFor]="appliances">Appliances <span>&#10148;</span></button>
+              <button class="example-menu-item" cdkMenuItem >Masks</button>
+              <button class="example-menu-item" cdkMenuItem >Beauty Gift & Makeup set</button>
+              <button class="example-menu-item" cdkMenuItem >Wellness & Hygiene</button>
+            </div>
+          </ng-template>
+
+          <ng-template #makeup>
+            <div class="example-menu" cdkMenu>
+              <button class="example-menu-item" cdkMenuItem>Lipstick</button>
+              <button class="example-menu-item" cdkMenuItem>Lip Gloss</button>
+              <button class="example-menu-item" cdkMenuItem>Lip Liner</button>
+              <button class="example-menu-item" cdkMenuItem>Mascara</button>
+              <button class="example-menu-item" cdkMenuItem>Eye Liner</button>
+              <button class="example-menu-item" cdkMenuItem>Kajal</button>
+              <button class="example-menu-item" cdkMenuItem>Eyeshadow</button>
+              <button class="example-menu-item" cdkMenuItem>Foundation</button>
+              <button class="example-menu-item" cdkMenuItem>Nail Polish</button>
+            </div>
+          </ng-template>
+
+          <ng-template #skinBathBody>
+            <div class="example-menu" cdkMenu>
+              <button class="example-menu-item" cdkMenuItem [cdkMenuTriggerFor]="face">Face <span>&#10148;</span></button>
+              <button class="example-menu-item" cdkMenuItem [cdkMenuTriggerFor]="body">Body <span>&#10148;</span></button>
+            </div>
+          </ng-template>
+
+            <ng-template #face>
+              <div class="example-menu" cdkMenu>
+                <button class="example-menu-item" cdkMenuItem>Face Moisturiser</button>
+                <button class="example-menu-item" cdkMenuItem>Cleanser</button>
+                <button class="example-menu-item" cdkMenuItem>Masks & Peel</button>
+                <button class="example-menu-item" cdkMenuItem>Serum</button>
+                <button class="example-menu-item" cdkMenuItem>Face Wash</button>
+                <button class="example-menu-item" cdkMenuItem>Eye Cream</button>
+                <button class="example-menu-item" cdkMenuItem>Lip Balm</button>
+              </div>
+            </ng-template>
+
+            <ng-template #body>
+              <div class="example-menu" cdkMenu>
+                <button class="example-menu-item" cdkMenuItem>Soaps</button>
+                <button class="example-menu-item" cdkMenuItem>Sun Screens</button>
+                <button class="example-menu-item" cdkMenuItem>Body Lotion</button>
+                <button class="example-menu-item" cdkMenuItem>Body Wash</button>
+                <button class="example-menu-item" cdkMenuItem>Body Scrub</button>
+                <button class="example-menu-item" cdkMenuItem>Hand Cream</button>
+              </div>
+            </ng-template>
+
+          <ng-template #hairCare>
+            <div class="example-menu" cdkMenu>
+              <button class="example-menu-item" cdkMenuItem>Shampoo</button>
+              <button class="example-menu-item" cdkMenuItem>Conditioner</button>
+              <button class="example-menu-item" cdkMenuItem>Hair Cream</button>
+              <button class="example-menu-item" cdkMenuItem>Hair Oil</button>
+              <button class="example-menu-item" cdkMenuItem>Hair Gel</button>
+              <button class="example-menu-item" cdkMenuItem>Hair Color</button>
+              <button class="example-menu-item" cdkMenuItem>Hair Serum</button>
+              <hr />
+              <button class="example-menu-item" cdkMenuItem>Hair Accessory</button>
+            </div>
+          </ng-template>
+
+          <ng-template #fragnances>
+            <div class="example-menu" cdkMenu>
+              <button class="example-menu-item" cdkMenuItem>Perfume</button>
+              <button class="example-menu-item" cdkMenuItem>Deodrant</button>
+              <button class="example-menu-item" cdkMenuItem>Body Mist</button>
+            </div>
+          </ng-template>
+
+          <ng-template #appliances>
+            <div class="example-menu" cdkMenu>
+              <button class="example-menu-item" cdkMenuItem>Hair Straighters</button>
+              <button class="example-menu-item" cdkMenuItem>Hair Dryer</button>
+              <button class="example-menu-item" cdkMenuItem>Epilators</button>
+            </div>
+          </ng-template>
+          <!-- Beauty Section Ends  -->
+
+        </div> <!-- CDK-Menu  Ends-->
 
         <div class="nav-right d-flex align-items-center">
           <mat-icon matBadge="3" matBadgePosition="above after" matBadgeColor="warn" fontIcon="shopping_cart" class="nav-link"></mat-icon>
           <button class="ms-5 login-btn popin-font" mat-stroked-button (click)="openDialog()">LOGIN</button>
-        </div>
-      </div>
+        </div> <!-- Login Button -->
+      </div> <!-- Nav bar for Large and above Ends -->
       
 
       <div class="nav-bar-md d-lg-none">
@@ -27,18 +219,13 @@
           <mat-icon>more_vert</mat-icon>
         </button>
         <mat-menu #menu="matMenu" class="w-150" style="width: 200px;">
-          <button mat-menu-item>
-            <a class="nav-link popin-font c-primary-dark fs-6 fw-bold">Home</a>
-          </button>
-          <button mat-menu-item>
-            <a class="nav-link popin-font c-primary-dark fs-6 fw-bold">Shop</a>
-          </button>
-          <button mat-menu-item>
-            <a class="nav-link popin-font c-primary-dark fs-6 fw-bold">Features</a>
-          </button>
-          <button mat-menu-item>
-            <a class="nav-link popin-font c-primary-dark fs-6 fw-bold">Contact</a>
-          </button>
+          <div cdkMenuBar class="d-flex flex-column justify-content-center align-items-center">
+            <button class="example-menu-bar-item popin-font c-primary-dark" cdkMenuItem >Home</button>
+            <button class="example-menu-bar-item popin-font c-primary-dark" cdkMenuItem [cdkMenuTriggerFor]="ethnic"><span class="me-1">&#x2C2;</span> Ethnic</button>
+            <button class="example-menu-bar-item popin-font c-primary-dark" cdkMenuItem [cdkMenuTriggerFor]="western"><span class="me-1">&#x2C2;</span> Western</button>
+            <button class="example-menu-bar-item popin-font c-primary-dark" cdkMenuItem [cdkMenuTriggerFor]="beauty"><span class="me-1">&#x2C2;</span> Beauty</button>
+          </div>
+
           <button mat-menu-item class="py-3">
             <div class="demo-section">
               <button mat-raised-button color="primary"
@@ -53,13 +240,11 @@
             </div>
           </button>
         </mat-menu>
-      </div>
-
-    </mat-toolbar>  
+      </div> <!-- Nav bar for small and medium devices ends -->
+    </mat-toolbar> <!-- Tool Bar Ends -->
   </header>
   <!-- Header Section Ends -->
 
-  
   <!-- Main Section Starts -->
   <div class="main-section bg-primary-light p-4">
     <div class="container">
@@ -447,9 +632,9 @@
 
   <!-- Footer Section Starts -->
   <footer class="footer bg-primary-dark">
-    <div class="container-fluid">
+    <div class="container">
       <div class="row flex-column flex-sm-row py-3 pb-0">
-        <div class="flex-1 col-12 col-sm-4 d-flex flex-column popin-font align-items-center align-items-sm-start">
+        <div class="flex-1 col-12 col-sm-3 d-flex flex-column popin-font align-items-center align-items-sm-start">
           <button mat-button class="example-icon align-self-md-start">
             <img src="https://res.cloudinary.com/dfspkh5oi/image/upload/v1697019254/TechVedika/AngularMateriall/Rivo_cjpn4c.png" alt="RIVO" class="rivo-logo" />
           </button>
@@ -484,7 +669,7 @@
             <li><a class="c-primary-light fs-6">Support</a></li>
           </ul>
         </div>
-        <div class="flex-3 col-12 col-sm-4 py-3 pb-0 py-sm-0 d-flex flex-column">
+        <div class="flex-3 col-12 col-sm-5 py-3 pb-0 py-sm-0 d-flex flex-column">
           <h1 class="fs-4 popin-font c-primary-light">STAY UP TO DATE</h1>
           <mat-form-field class="example-form-field">
             <mat-label>Enter Your Email</mat-label>

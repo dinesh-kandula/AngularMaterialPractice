@@ -45,9 +45,26 @@
     .nav-right .mat-mdc-button-base.mat-unthemed {
         --mdc-outlined-button-label-text-color: var(--primary-dark);
     }
+
+   
+    .cdk-menu-bar .example-menu-bar-item {
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+      
+        user-select: none;
+        min-width: 34px;
+        line-height: 26px;
+        padding: 0 16px;
+    }
+        
+          
+    .example-menu-bar-item[aria-expanded='true'],
+    .example-menu-item[aria-expanded='true'] {
+      background-color: rgb(0,0,0, 0.1) !important;
+    }          
    
 }
-
 /* Header Section Styling Ends */
 
 
@@ -102,7 +119,6 @@
         }
     }
 }
-
 /* Main Section Styling Ends */
 
 
@@ -169,7 +185,6 @@
         }
     }
 }
-
 /* Best Selling Styling Ends */
 
 
@@ -222,6 +237,7 @@
 }
 /* Our Products Styling Ends */
 
+
 /* Exclusive offer Styling Start */
 .exclusive-offer{
     
@@ -237,6 +253,7 @@
     }
 }
 /* Exclusive offer Styling Ends */
+
 
 /* Desginer Section Styling Starts */
 .designer-section{
@@ -302,7 +319,6 @@
     }
 }
 /* Desginer Section Styling Ends */
-
 
 
 /* Footer Styling Starts */
